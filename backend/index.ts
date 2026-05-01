@@ -170,6 +170,7 @@ if (fs.existsSync(frontendPath)) {
   });
 }
 
-app.listen(port, () => {
-  console.log(`Backend listening at http://localhost:${port}`);
+const PORT_NUM = Number(port);
+app.listen(PORT_NUM, "0.0.0.0", () => {
+  console.log(`Backend listening at http://0.0.0.0:${PORT_NUM}`);
 });
